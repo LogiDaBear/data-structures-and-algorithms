@@ -23,14 +23,8 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  // let personObj = [{name: 'Logan', age: 200, shoeSize: 14},{name: 'Cleo', age: 100, shoeSize: 4},{name: 'Naomi', age: 300, shoeSize: 1} ]
-  return arr.map(name =>{
-    let letters = name.name.split('');
-    let reverseName = letters.reverse();
-    return reverseName.join('')
-  } );
+  return arr.map((person) => person.name.split('').reverse().join(''));
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -39,10 +33,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
- 
-  let str1 = ' The end.';
-  return str.concat('', str1)
-
+  return str + ' The end.';
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +50,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,7 +69,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
