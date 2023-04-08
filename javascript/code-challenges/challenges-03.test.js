@@ -7,7 +7,13 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  // Solution code here...
+
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] + 2);
+  }
+  return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,7 +25,9 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
+
+  return arr.filter((val) => typeof val === 'number');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +39,9 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+
+  return arr.filter((val) => val.includes('and'));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +53,9 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+
+  return arr.filter((val) => val % 2 !== 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +67,9 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+
+  return arr.filter((val) => !forbiddenValues.includes(val));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +112,9 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+
+  return arr.filter(stat => stat.baseStat > minBaseStat);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
