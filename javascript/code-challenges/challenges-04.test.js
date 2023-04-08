@@ -22,12 +22,11 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  const updatedArr = [];
-  arr.forEach(animal => {
-    const updatedAnimal = callback(animal);
-    updatedArr.push(updatedAnimal);
-  });
-  return updatedArr;
+  const updatedAnimals = [];
+  for (let i = 0; i < arr.length; i++) {
+    updatedAnimals.push(callback(arr[i]));
+  }
+  return updatedAnimals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +50,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  return arr.sort(sortNumbers);
+  return arr.sort((a, b) => a - b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,7 +77,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
- return arr.sort();
+    arr.sort();
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,8 +95,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  arr.sort((a, b) => a.price - b.price);
-  return arr;
+  return arr.sort((a, b) => a.price - b.price);
 };
 
 /* ------------------------------------------------------------------------------------------------
