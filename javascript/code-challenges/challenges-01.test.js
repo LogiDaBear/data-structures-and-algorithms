@@ -9,11 +9,13 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+
   const result = [];
   arr.forEach((num) => {
     result.push(num + 1);
   });
   return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,11 +27,13 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
+
   const result = [];
   arr.forEach((str) => {
     result.push(str + "!");
   });
   return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,11 +45,13 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
+
   const result = [];
   arr.forEach((str) => {
     result.push(str.toUpperCase());
   });
   return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,11 +69,13 @@ const greeting = (word) => {
 };
 
 const speaker = (words, callback) => {
+
   const result = [];
   words.forEach((word) => {
     result.push(callback(word));
   });
   return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,7 +125,9 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   const groceryList = [];
+
   availableItems.forEach(item => {
+
     if (item.available) {
       groceryList.push(item.name);
     }
