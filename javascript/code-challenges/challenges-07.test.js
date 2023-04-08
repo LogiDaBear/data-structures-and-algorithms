@@ -25,8 +25,8 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  starWarsArr.sort.height = star
-  
+  starWarsArr.sort((a, b) => b.height - a.height);
+  return starWarsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  let removeThree = 
+  arr.splice(idx, 3);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  let joinArray = 
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +64,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i = 1; i <= str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -76,8 +78,8 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
+const wordsToCharList = (str) => {
+  return str.split('');
 };
 
 
@@ -124,7 +126,15 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    const ingredient = recipe.ingredients[i];
+    const startIndex = ingredient.indexOf(' ') + 1;
+    const endIndex = ingredient.indexOf(' ', startIndex);
+    const food = ingredient.substring(startIndex, endIndex !== -1 ? endIndex : undefined);
+    result.push(food);
+  }
+
   return result;
 };
 
