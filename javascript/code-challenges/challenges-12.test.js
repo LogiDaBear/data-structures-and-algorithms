@@ -10,7 +10,6 @@ const replaceZeros = (string) => {
   return string.replace(/0/g, 'zero');
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -20,7 +19,7 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  const pattern = /^\d{4}$/; 
+  const pattern = /^\d{4}$/;
   return pattern.test(pin);
 };
 
@@ -33,7 +32,8 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
-  // Solution code here...
+  const regex = /^[a-zA-Z]{5,10}$/;
+  return regex.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +45,8 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-  // Solution code here...
+  const pattern = /[a-zA-Z]+\d+/;
+  return pattern.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +66,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  const emailRegex = /^[a-z0-9]+(?:\.[a-z0-9]+)?@[a-z]+\.(?:com|net|org)$/;
+  return emailRegex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,7 +92,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  const pattern = /^(\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$/;
+  return pattern.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
