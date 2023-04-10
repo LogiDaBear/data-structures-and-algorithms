@@ -8,11 +8,15 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
   let longestIndex = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > arr[longestIndex].length) {
+  let maxLength = arr[0].length;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length > maxLength) {
       longestIndex = i;
+      maxLength = arr[i].length;
     }
   }
+
   return longestIndex;
 };
   
@@ -25,11 +29,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result.push(arr[i][0]);
-  }
-  return result;
+  return arr.map((str) => str.charAt(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,7 +41,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  const regex = /:\)/;
+  return arr.filter((str) => regex.test(str));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +54,7 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  return arr.map(phone => phone.replace(/\D/g, ''));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +66,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let result = "";
+  for (let i = 1; i < str.length; i += 2) {
+    result += str[i];
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +80,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  const regex = /:\)/;
+  for (let i = 0; i < arr.length; i++) {
+    if (!regex.test(arr[i])) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /* ------------------------------------------------------------------------------------------------
