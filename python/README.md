@@ -76,3 +76,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run in watch mode** - `ptw` or `pytest-watch`
 
 ### [Array-Reverse README.md file](code_challenges/arrayreverse/README.md)
+
+### [Array-insert-shift](code_challenges/array-insert-shift/README.md)
