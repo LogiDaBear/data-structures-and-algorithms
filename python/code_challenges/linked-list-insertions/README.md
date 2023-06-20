@@ -22,4 +22,5 @@ adds a new node with the given new value immediately after the first node that h
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ## Contributions:
-- Slava Makeev and Sarah Glass
+- Slava Makeev and Sarah Glass and ChatGPT
+
