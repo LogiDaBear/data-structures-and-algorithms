@@ -67,5 +67,31 @@ class LinkedList:
             new_node.next = temp
         except Exception as e:
                     raise TargetError
+        
+    # Code Challenge 07     
+    def kth_from_end(self, k):
+        try:
+             if self.head == None:
+                return Exception 
+             else:
+             
+                  current = self.head
+                  count = 0  
+                  while current.next:
+                        count += 1  
+                        current = current.next
+                  difference = count - k
+ 
+             if k > count:
+                     raise TargetError 
+ 
+             current_2 = self.head
+             for node in range(1, difference + 1):
+                    current_2 = current_2.next
+             return current_2.value
+        except Exception as e:
+             raise TargetError
+    
+
 class TargetError(Exception):
         pass
