@@ -82,3 +82,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [Array-binary-search](code_challenges/array-binary-search/README.md)
 
 ### [linked-list](data_structures/linked-list/README.md)
+
+### [linked-list-insertions](code_challenges/linked-list-insertions/README.md)
