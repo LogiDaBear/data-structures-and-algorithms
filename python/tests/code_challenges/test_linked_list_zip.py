@@ -1,7 +1,7 @@
 import pytest
-# from code_challenges.test_linked_list_zip import zip_lists
+from code_challenges.linked_list_zip import zip_lists
 from data_structures.linked_list import LinkedList
-from data_structures.linked_list import zip_lists
+
 
 def test_exists():
     assert zip_lists
