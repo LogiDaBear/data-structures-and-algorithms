@@ -88,3 +88,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [linked-list-kth](code_challenges/linked-list-kth/README.md)
 
 ### [linked-list-zip](code_challenges/linked-list-zip/README.md)
+
+### [stack and queue](code_challenges/stack_and_queue/README.md)
