@@ -90,3 +90,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [linked-list-zip](code_challenges/linked-list-zip/README.md)
 
 ### [stack and queue](code_challenges/stack_and_queue/README.md)
+
+### [stack and queue pseudo](code_challenges/stack-queue-pseudo/README.md)
