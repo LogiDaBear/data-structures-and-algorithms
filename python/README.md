@@ -92,3 +92,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [stack and queue](code_challenges/stack_and_queue/README.md)
 
 ### [stack and queue pseudo](code_challenges/stack-queue-pseudo/README.md)
+
+### [stack queue animal shelter](code_challenges/stack-queue-animal-shelter/README.md)
