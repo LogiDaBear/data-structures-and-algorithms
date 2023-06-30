@@ -96,3 +96,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [stack queue animal shelter](code_challenges/stack-queue-animal-shelter/README.md)
 
 ### [stack queue brackets](code_challenges/stack-queue-brackets/README.md)
+
+### [binary tree and BST](code_challenges/BT-and-BST/README.md)
