@@ -100,3 +100,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [binary tree and BST](code_challenges/BT-and-BST/README.md)
 
 ### [tree-max](code_challenges/tree-max/README.md)
+
+### [tree-breadth-first](code_challenges/tree-breadth-first/README.md)
