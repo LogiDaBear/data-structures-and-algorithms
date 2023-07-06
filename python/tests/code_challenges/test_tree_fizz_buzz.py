@@ -3,12 +3,12 @@ from code_challenges.tree_fizz_buzz import fizz_buzz_tree
 from data_structures.kary_tree import KaryTree, Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_exists():
     assert fizz_buzz_tree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_one_to_15_fizzy_clone(tree):
 
     fizzy_tree = fizz_buzz_tree(tree)
@@ -36,7 +36,7 @@ def test_one_to_15_fizzy_clone(tree):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_new_copy_returned(tree):
 
     fizz_buzz_tree(tree)
@@ -99,3 +99,34 @@ def tree():
     nine.children = [fourteen, fifteen]
 
     return KaryTree(one)
+
+def test_empty_tree():
+    # Edge Case: Test an empty tree
+    tree = KaryTree(None)
+    fizz_buzz_result = fizz_buzz_tree(tree)
+    assert fizz_buzz_result is None
+
+
+def test_single_node():
+    # Happy Path: Test a tree with a single node
+    node = Node(7)
+    tree = KaryTree(node)
+    fizz_buzz_result = fizz_buzz_tree(tree)
+    expected = ["7"]
+    assert fizz_buzz_result.breadth_first() == expected
+
+
+def test_no_divisible_values():
+    # Error Case: Test a tree with no values divisible by 3 or 5
+    one = Node(1)
+    two = Node(2)
+    three = Node(4)  # Not divisible by 3 or 5
+    four = Node(7)  # Not divisible by 3 or 5
+
+    one.children = [two]
+    two.children = [three, four]
+
+    tree = KaryTree(one)
+    fizz_buzz_result = fizz_buzz_tree(tree)
+    expected = ["1", "2", "4", "7"]
+    assert fizz_buzz_result.breadth_first() == expected
