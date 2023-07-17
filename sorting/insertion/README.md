@@ -8,7 +8,6 @@ Once you are done with your article, code a working, tested implementation of In
 ## Whiteboard Process
 ![code challenge 26](CC26.jpg)
 
-
 ## Approach & Efficiency
 Big0-Space:O(n)
 Time:O(1)
