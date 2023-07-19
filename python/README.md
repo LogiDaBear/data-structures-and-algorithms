@@ -106,3 +106,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [tree-fizz-buzz](code_challenges/tree-fizz-buzz/README.md)
 
 ### [insertion-sort](data-structures-and-algorithms/sorting/insertion/README.md)
+
+### [merge-sort](data-structures-and-algorithms/sorting/merge/README.md)
