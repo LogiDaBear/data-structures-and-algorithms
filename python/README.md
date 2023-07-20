@@ -108,3 +108,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### [insertion-sort](data-structures-and-algorithms/sorting/insertion/README.md)
 
 ### [merge-sort](data-structures-and-algorithms/sorting/merge/README.md)
+
+### [sorting comparisons](data-structures-and-algorithms/sorting/comparison/README.md)
