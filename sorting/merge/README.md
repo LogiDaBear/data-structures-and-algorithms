@@ -35,9 +35,34 @@ Using the following pseudocode create a blog post and also include the following
              set remaining entries in arr to remaining values in right
           else
              set remaining entries in arr to remaining values in left
+## Blog
+
+Starting
+
+- Array: [8, 4, 23, 42, 16, 15]
+
+2. Divide the Array
+
+- Split the array into two halves:
+- Left Half (L): [8, 4, 23]
+- Right Half (R): [42, 16, 15]
+
+3. Recursively Sort Left and Right Halves
+
+- Sort Left Half (L): [4, 8, 23]
+- Sort Right Half (R): [15, 16, 42]
+
+4. Merge the Sorted Halves
+
+- Merge Left (L) and Right (R) Halves:
+- Merged Array: [4, 8, 15, 16, 23, 42]
+
+5. Final Sorted Array
+
+- Sorted Array: [4, 8, 15, 16, 23, 42]
 ## Whiteboard Process
 
-![code challenge 27](cc27.jpg)
+blog
 
 ## Approach & Efficiency
 Big0
@@ -48,4 +73,7 @@ Big0
 [sorting/merge/merge_sort.py](sorting/merge/merge_sort.py)
 
 ### Contributions
+Class401d22
+
 super amazing awesome explanation and code for this process found here [https://www.geeksforgeeks.org/merge-sort/](https://www.geeksforgeeks.org/merge-sort/)
+
