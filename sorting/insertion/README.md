@@ -12,45 +12,54 @@ blog article
 
 Step-by-Step Process of Insertion Sort
 
-1. Initial State
+1. Starting arrays
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: []
-2. First Iteration (Insert 5)
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: []
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [5]
-Explanation: The first element of the input array (5) is placed in the sorted array since it is the only element.
-3. Second Iteration (Insert 2)
+2. First Iteration (Insert 8)
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [2, 5]
-Explanation: The second element of the input array (2) is compared with the elements in the sorted array (5). As 2 is smaller than 5, it is inserted before 5, resulting in [2, 5].
-4. Third Iteration (Insert 9)
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [8]
+- The first element of the input array (8) is placed in the sorted array since it is the only element.
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [2, 5, 9]
-Explanation: The third element of the input array (9) is compared with the elements in the sorted array (2, 5). As 9 is greater than 5, it is inserted after 5, resulting in [2, 5, 9].
-5. Fourth Iteration (Insert 1)
+3. Second Iteration (Insert 4)
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [1, 2, 5, 9]
-Explanation: The fourth element of the input array (1) is compared with the elements in the sorted array (2, 5, 9). As 1 is smaller than 2, it is inserted before 2, resulting in [1, 2, 5, 9].
-6. Fifth Iteration (Insert 5)
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [4, 8]
+- The second element of the input array (4) is compared with the elements in the sorted array (8). As 4 is smaller than 8, it is inserted before 8, resulting in [4, 8].
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [1, 2, 5, 5, 9]
-Explanation: The fifth element of the input array (5) is compared with the elements in the sorted array (1, 2, 5, 9). As 5 is equal to 5, it is inserted after the first 5, resulting in [1, 2, 5, 5, 9].
-7. Sixth Iteration (Insert 6)
+4. Third Iteration (Insert 23)
 
-input array: [5, 2, 9, 1, 5, 6]
-sorted array: [1, 2, 5, 5, 6, 9]
-Explanation: The sixth element of the input array (6) is compared with the elements in the sorted array (1, 2, 5, 5, 9). As 6 is greater than 5 and less than 9, it is inserted between 5 and 9, resulting in [1, 2, 5, 5, 6, 9].
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [4, 8, 23]
+- The third element of the input array (23) is compared with the elements in the sorted array (4, 8). As 23 is greater than 8, it is inserted after 8, resulting in [4, 8, 23].
+
+5. Fourth Iteration (Insert 42)
+
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [4, 8, 23, 42]
+- The fourth element of the input array (42) is compared with the elements in the sorted array (4, 8, 23). As 42 is greater than 23, it is inserted after 23, resulting in [4, 8, 23, 42].
+
+6. Fifth Iteration (Insert 16)
+
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [4, 8, 16, 23, 42]
+- The fifth element of the input array (16) is compared with the elements in the sorted array (4, 8, 23, 42). As 16 is greater than 8 and less than 23, it is inserted between 8 and 23, resulting in [4, 8, 16, 23, 42].
+
+7. Sixth Iteration (Insert 15)
+
+- input array: [8, 4, 23, 42, 16, 15]
+- sorted array: [4, 8, 15, 16, 23, 42]
+- The sixth element of the input array (15) is compared with the elements in the sorted array (4, 8, 16, 23, 42). As 15 is greater than 8 and less than 16, it is inserted between 8 and 16, resulting in [4, 8, 15, 16, 23, 42].
 
 
 ## Approach & Efficiency
 Big0-Space:O(n)
 Time:O(1)
+
+## Attributions & References
+Class 401d22, [geeksforgeeks](https://www.geeksforgeeks.org/insertion-sort/)
 
 ## Solution
 [sorting/insertion/insertion.py](sorting/insertion/insertion.py)
