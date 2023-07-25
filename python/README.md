@@ -111,4 +111,6 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 ### [sorting comparisons](data-structures-and-algorithms/sorting/comparison/README.md)
 
-### [hashtable](data_structures/hashtable.py)
+### [hashtable](data-structures-and-algorithms/hashtable/README.md)
+
+### [hashtable-repeated-words](data-structures-and-algorithms/python/code_challenges/hashmap-repeated-word/README.md)
