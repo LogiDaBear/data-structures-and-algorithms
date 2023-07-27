@@ -60,7 +60,13 @@ class Hashtable:
                 keys_list.append(current.key)
                 current = current.next
         return keys_list
+    def contains(self, key):
 
+        index = self._hash(key)
+        current = self._buckets[index]
+        while current:
+          if current.key == key:
+            return True
+          current = current.next
+        return False
 
-if __name__== "__main__":
-    pass

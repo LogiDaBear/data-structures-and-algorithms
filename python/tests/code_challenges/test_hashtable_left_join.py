@@ -6,7 +6,7 @@ def test_exists():
     assert left_join
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_example():
     synonyms = {
         "diligent": "employed",
@@ -34,3 +34,35 @@ def test_example():
     actual = left_join(synonyms, antonyms)
 
     assert actual == expected
+
+def test_left_join_with_integers():
+  synonyms = {
+    1: 2,
+    3: 4,
+    5: 6,
+  }
+  antonyms = {
+    2: 1,
+    4: 3,
+  }
+
+  expected = [
+    [1, 2, 1],
+    [3, 4, 3],
+    [5, 6, "NONE"],
+  ]
+
+  actual = left_join(synonyms, antonyms)
+
+  assert actual == expected
+
+
+def test_left_join_not_empty():
+  synonyms = {}
+  antonyms = {}
+
+  expected = []
+
+  actual = left_join(synonyms, antonyms)
+
+  assert actual == expected
