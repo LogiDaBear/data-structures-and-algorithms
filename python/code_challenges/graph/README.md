@@ -39,7 +39,7 @@ Returns the total number of vertices in the graph
 - The proper size is returned, representing the number of vertices in the graph
 - A graph with only one vertex and edge can be properly returned
 
-- test with: pytest 
+- test with: `pytest tests/data_structures/test_graph.py`
 
 ## Attributions
 - Class 401d22 and Roger
